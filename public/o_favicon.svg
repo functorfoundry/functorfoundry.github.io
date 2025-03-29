@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" viewBox="0 0 345 102">
+    <!-- Yes I handwrote this svg myself. -->
+    <text x="0" y="65" class="code">[</text>
+    <text x="30" y="74" id="fu">f</text>
+    <text x="61" y="74" id="fo">f</text>
+    <text x="100" y="65" class="code">]</text>
+    <style>
+    <![CDATA[ 
+    @font-face {
+        font-family: 'Fira Code';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap);
+    }
+    text { 
+       fill: #000; font: 120px 'Fira Code', monospace; 
+    }
+    .code {
+        fill: #ff8c00;
+    }
+    #fu { 
+        fill: #8c00ff;
+    }
+    #fo { 
+        fill: #5c00dd;
+    }
+    @media (prefers-color-scheme: dark) {
+       svg {
+          background: #0f0f0f;
+       }
+       text { fill: #FFF; }
+    }
+    ]]>
+    </style>
+</svg>
+
+
+
+    
+    
+    
+    

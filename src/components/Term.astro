@@ -1,0 +1,51 @@
+---
+interface Props {
+  text: string;
+  sizeRem?: number;
+  animate?: boolean;
+}
+const { text, sizeRem, animate } = Astro.props;
+const anim_width = (text.length) * (sizeRem ? 0.6* sizeRem : 0.6) + "rem";
+---
+
+<span
+  class="term"
+  style={{
+    display: animate ? "inline-flex" : "inline",
+  }}
+>
+  {text}
+</span>
+
+<style define:vars={{ anim_width, length: text.length, font_size_in_rem: `${sizeRem ?? 0.6}rem` }}>
+  .term {
+    overflow: hidden;
+    white-space: nowrap;
+    /* Thanks! https://designmodo.com/steps-css-animations */
+    animation: ttyanim 1s steps(var(--length), end);
+    font-size: var(--font_size_in_rem);
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-animation: hue 30s infinite linear;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  /* a { */
+  /*   box-shadow: inset 0 -2px 0 0 #fff; */
+  /* } */
+  @keyframes ttyanim {
+    from {
+      width: 0;
+    }
+    to {
+      width: var(--anim_width);
+    }
+  }
+  @-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-360deg);
+    }
+  }
+</style>

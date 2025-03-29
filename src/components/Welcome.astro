@@ -1,0 +1,66 @@
+---
+import Term from './Term.astro';
+import {
+  FaBrandsGithub,
+  FaBrandsLinkedin,
+  FaSolidLink,
+  FaBrandsTelegram,
+  FaSolidCalendar,
+} from "solid-icons/fa";
+---
+
+<div id="container">
+	<div id="hero">
+		<Term text="[ff]" sizeRem={7} animate />
+		<span style="margin: 1rem 0 1rem 0;">
+			We're functor foundry.
+		</span>
+		<span>
+			We're a small team of indie devs
+		</span>
+		<span>
+			making handcrafted tools we use ourselves,
+		</span>
+		<span>
+			helping passionate builders like you thrive.
+		</span>
+		<div style="margin-top: 1rem; font-size: 2rem;">
+			<a href="https://github.com/functorfoundry" target="_blank">
+				<FaBrandsGithub />
+			</a>
+			<!-- TODO: add LinkedIn
+			<a href="https://www.linkedin.com/company/functor-foundry" target="_blank">
+				<FaBrandsLinkedin />
+			</a>
+			-->
+		</div>
+		<span style="margin-top: 3rem;">
+			Made in 2025.
+		</span>
+</div>
+
+<style>
+	#container {
+		font-family: 'Fira Code', monospace;
+		line-height: 1.5;
+		height: 100%;
+	}
+
+	#hero {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+	}
+
+	a {
+		display: inline-flex;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	a:hover, a:focus {
+		color: #aee;
+	}
+</style>
